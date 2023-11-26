@@ -3,7 +3,22 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    background-color: rgb(246, 246, 246);
+    margin: 0;
+}
+
+body {
+    --primary-color: rgb(181, 39, 37);
+    --primary-color-hover: rgb(152, 32, 30);    
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
 }
 
 .full-screen-section {
