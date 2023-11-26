@@ -7,6 +7,8 @@ import { ProjectsComponent } from './sections/projects/projects.component';
 import { AboutComponent } from './sections/about/about.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
+import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { ExperienceComponent } from './sections/experience/experience.component'
     ProjectsComponent,
     AboutComponent,
     ContactComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    HeaderComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
