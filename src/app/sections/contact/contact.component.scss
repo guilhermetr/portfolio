@@ -1,0 +1,51 @@
+/* styles.css */
+
+form {
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto;
+    box-sizing: border-box;
+    text-align: center;    
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+@media (max-width: 600px) {
+    form {
+        margin: 20px auto;
+        padding: 10px;
+    }
+}
