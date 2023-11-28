@@ -10,16 +10,26 @@ body {
 }
 
 body {
-    --primary-color: rgb(181, 39, 37);
-    --primary-color-hover: rgb(152, 32, 30);    
+    --primary: rgb(181, 39, 37);
+    --primary-hover: rgb(152, 32, 30);
+
+    --dark: rgb(51, 51, 51);
 }
 
 h1 {
     font-size: 4rem;
+    margin: 0;
 }
 
 h2 {
     font-size: 3.5rem;
+    margin: 0;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--dark);
 }
 
 .full-screen-section {
