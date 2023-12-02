@@ -9,6 +9,8 @@ import { ContactComponent } from './sections/contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlipCardComponent } from './flip-card/flip-card.component';
+import { HomeComponent } from './sections/home/home.component';
+import { UpgradePopupComponent } from './upgrade-popup/upgrade-popup.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { FlipCardComponent } from './flip-card/flip-card.component';
     ContactComponent,
     HeaderComponent,
     FlipCardComponent,
+    HomeComponent,
+    UpgradePopupComponent,
   ],
   imports: [
     BrowserModule,

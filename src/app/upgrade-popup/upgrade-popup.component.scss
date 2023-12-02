@@ -1,0 +1,105 @@
+$col-primary: #00c7ec;
+$col-secondary: #012839;
+
+.card {  
+  background-color: $col-secondary;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+  text-align: center;    
+  width: 320px;
+}
+
+p {
+  font-family: 'Gabarito', sans-serif;
+  font-size: 20px;
+  color: $col-primary;
+  padding: 16px 4px 16px 4px;    
+}
+
+.collapse-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.collapse-btn:hover {
+  opacity: 0.8;
+}
+
+.fa-angle-down {
+  font-size: 15px;
+  transition: transform 0.3s ease;
+  color: $col-primary;
+}
+
+// Upgrade Button
+
+.upgrade-btn {  
+  background-color: lighten($col-secondary, 10%);
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: $col-primary;  
+  border-radius: 5px;
+  line-height: 2em;  
+  text-decoration: none;
+  font-family: 'Gabarito', sans-serif;  
+  font-size: 25px;
+  box-shadow: 0 0 0 0 transparent;
+  transition: all 0.2s ease-in;  
+
+  &:hover {
+    color: white;
+    box-shadow: 0 0 30px 0 transparentize($col-primary, 0.5);
+    background-color: $col-primary;
+
+    transition: all 0.2s ease-out;
+
+    &:before {
+      animation: shine 0.5s 0s linear;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 2s ease-in;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+
+    opacity: 0;
+    background: white;
+    box-shadow: 0 0 15px 3px white;
+    transform: skewX(-20deg);
+  }
+}
+
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+  

@@ -1,21 +1,6 @@
-.portfolio-nav {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  padding-top: 20px;
-}
-
-.nav-btn {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.nav-btn:hover {
-  background-color: var(--primary-hover);
+.upgrade-section {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1000;
 }
