@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { LevelService } from 'src/app/level.service';
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class HomeComponent {
 
   currentLevel!: string;
 
   constructor(private levelService: LevelService) {}
-  
+
   ngOnInit(): void {
     this.levelService.currentLevel$.subscribe((level: string) => {
       this.currentLevel = level;

@@ -19,18 +19,7 @@
     height: 100%;
 }
 
-.nav-link {
-    text-decoration: none;
-    color: var(--dark);    
-    font-size: 15px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    text-align: left;
-}
 
-.nav-link:hover {
-    color: var(--primary);
-}
 
 p {
     margin: 0;
@@ -39,3 +28,17 @@ p {
     font-weight: bold;
 }
   
+.level3 {
+    .nav-link {
+        text-decoration: none;
+        color: var(--dark);    
+        font-size: 15px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        text-align: left;
+    }
+    
+    .nav-link:hover {
+        color: var(--primary);
+    }
+}

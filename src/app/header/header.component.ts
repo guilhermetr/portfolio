@@ -1,16 +1,28 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { LevelService } from '../level.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-  
+export class HeaderComponent implements OnInit {
+
+  currentLevel!: string;
   isNavbarOpened = false;
   
-  constructor(private viewportScroller: ViewportScroller, private el: ElementRef) {}
+  constructor(
+    private viewportScroller: ViewportScroller, 
+    private el: ElementRef,
+    private levelService: LevelService
+  ) {}
+ 
+  ngOnInit(): void {
+    this.levelService.currentLevel$.subscribe((level: string) => {
+      this.currentLevel = level;
+    });
+  }
 
   scrollToElement(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);

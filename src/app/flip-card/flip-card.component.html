@@ -1,8 +1,8 @@
-<div class="card" (click)="flipCard()">
+<div class="card" [ngClass]="currentLevel" (click)="flipCard()">
     <div class="card__inner" [class.is-flipped]="isFlipped">
         <div class="card__face card__face--front">
             <div class="card__header">                            
-                <img [src]="imagePath" class="image" />
+                <img *ngIf="currentLevel != 'level1'" [src]="imagePath" class="image" />
                 <h2>{{ title }}</h2>
             </div>
         </div>
