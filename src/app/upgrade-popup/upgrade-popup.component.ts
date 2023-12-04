@@ -1,5 +1,6 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, HostBinding, OnInit } from '@angular/core';
+import { LevelService } from '../level.service';
 
 @Component({
   selector: 'app-upgrade-popup',
@@ -21,7 +22,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
         animate('0.3s ease'),
       ]),
     ]),
-    trigger('resizeCard', [
+    trigger('resize', [
       state('collapsed', style({
         width: '160px',
       })),
@@ -36,10 +37,10 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 })
 export class UpgradePopupComponent implements OnInit {
   
-  messageBoxAnimationState = 'expanded'; // Initial state
-  cardAnimationState = 'expanded'; // Initial state
+  messageBoxAnimationState = 'expanded';
+  cardAnimationState = 'expanded';
   
-  constructor() { }
+  constructor(private levelService: LevelService) { }
 
   ngOnInit(): void { }
 
@@ -50,6 +51,10 @@ export class UpgradePopupComponent implements OnInit {
     setTimeout(() => {
       this.cardAnimationState = this.cardAnimationState === 'collapsed' ? 'expanded' : 'collapsed';
     }, 1); // 1ms creates a diagonal sliding effect
+  }
+
+  upgrade(): void {
+    this.levelService.setCurrentLevel('level3');
   }
 
 }

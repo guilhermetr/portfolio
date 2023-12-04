@@ -10,17 +10,13 @@ export class FlipCardComponent implements OnInit {
 
   @Input() title: string = "";
   @Input() imagePath: string = "";
-
-  currentLevel!: string;
+  @Input() level!: string;
+  
   isFlipped: boolean = false;    
         
   constructor(private levelService: LevelService) {}
 
-  ngOnInit(): void {
-    this.levelService.currentLevel$.subscribe((level: string) => {
-      this.currentLevel = level;
-    });
-  }  
+  ngOnInit(): void {}  
   
   flipCard(): void {
     this.isFlipped = !this.isFlipped;

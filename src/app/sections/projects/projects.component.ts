@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LevelService } from 'src/app/level.service';
 
 @Component({
@@ -8,14 +8,10 @@ import { LevelService } from 'src/app/level.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  currentLevel!: string;
+  @Input() level!: string;
 
-  constructor(private levelService: LevelService) {}
+  constructor() {}
   
-  ngOnInit(): void {
-    this.levelService.currentLevel$.subscribe((level: string) => {
-      this.currentLevel = level;
-    });
-  }  
+  ngOnInit(): void {}  
   
 }

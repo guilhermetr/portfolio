@@ -45,14 +45,16 @@ p {
   display: inline-block;
   position: relative;
   text-align: center;
-  color: $col-primary;  
+  color: $col-primary;
+  border: none;
   border-radius: 5px;
   line-height: 2em;  
   text-decoration: none;
   font-family: 'Gabarito', sans-serif;  
   font-size: 25px;
   box-shadow: 0 0 0 0 transparent;
-  transition: all 0.2s ease-in;  
+  transition: all 0.2s ease-in;
+  cursor: pointer;
 
   &:hover {
     color: white;

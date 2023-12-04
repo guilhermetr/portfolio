@@ -1,6 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
-import { LevelService } from '../level.service';
+import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,20 +8,12 @@ import { LevelService } from '../level.service';
 })
 export class HeaderComponent implements OnInit {
 
-  currentLevel!: string;
+  @Input() level!: string;
   isNavbarOpened = false;
   
-  constructor(
-    private viewportScroller: ViewportScroller, 
-    private el: ElementRef,
-    private levelService: LevelService
-  ) {}
+  constructor(private viewportScroller: ViewportScroller, private el: ElementRef) {}
  
-  ngOnInit(): void {
-    this.levelService.currentLevel$.subscribe((level: string) => {
-      this.currentLevel = level;
-    });
-  }
+  ngOnInit(): void {}
 
   scrollToElement(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);

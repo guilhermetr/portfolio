@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlipCardComponent } from './flip-card/flip-card.component';
 import { HomeComponent } from './sections/home/home.component';
 import { UpgradePopupComponent } from './upgrade-popup/upgrade-popup.component';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { UpgradePopupComponent } from './upgrade-popup/upgrade-popup.component';
     FlipCardComponent,
     HomeComponent,
     UpgradePopupComponent,
+    BodyComponent,
   ],
   imports: [
     BrowserModule,

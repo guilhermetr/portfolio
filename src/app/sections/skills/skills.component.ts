@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LevelService } from 'src/app/level.service';
 
 @Component({
@@ -9,15 +9,11 @@ import { LevelService } from 'src/app/level.service';
 })
 export class SkillsComponent implements OnInit {
   
-  currentLevel!: string;
+  @Input() level!: string;
         
-  constructor(private viewportScroller: ViewportScroller, private levelService: LevelService) {}
+  constructor(private viewportScroller: ViewportScroller) {}
 
-  ngOnInit(): void {
-    this.levelService.currentLevel$.subscribe((level: string) => {
-      this.currentLevel = level;
-    });
-  }  
+  ngOnInit(): void {}  
 
   scrollToElement(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);   

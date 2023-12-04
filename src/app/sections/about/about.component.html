@@ -1,4 +1,4 @@
-<div class="full-screen-section" [ngClass]="currentLevel">
+<div class="full-screen-section" [class]="level">
     <h2>About Me</h2>
     <h3>Get to know me!</h3>
     <div class="about-content">            
@@ -8,7 +8,7 @@
           </p>
           <p>Feel free to send me an <a>email</a> or connect with me on <a>LinkedIn</a>!</p>
         </div>
-        <img *ngIf="currentLevel != 'level1'" src="assets/me.jpg" alt="Profile Photo">
+        <img *ngIf="level != 'level1'" src="assets/me.jpg" alt="Profile Photo">
       </div>
 </div>
   

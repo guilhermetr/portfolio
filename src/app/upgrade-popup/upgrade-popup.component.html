@@ -1,9 +1,9 @@
-<div class="card" [@resizeCard]="cardAnimationState">
+<div class="card" [@resize]="cardAnimationState">
   <div class="message-box" [@slideDown]="messageBoxAnimationState">
     <p>Not a fan of how the website looks?</p>
     <button class="collapse-btn" (click)="toggleAnimation()">
       <i class="fa-solid fa-angle-down"></i>
     </button>
   </div>
-  <a href="#" class="upgrade-btn">UPGRADE</a>
+  <button class="upgrade-btn" (click)="upgrade()">UPGRADE</button>
 </div>
