@@ -1,4 +1,4 @@
-<header class="header" [class]="level">
+<header class="header" [class]="getLevelClass()">
   <button class="hamburger" (click)="toggleNavbar()">
     <i class="material-icons"> {{ isNavbarOpened ? "close" : "menu" }} </i>
   </button>

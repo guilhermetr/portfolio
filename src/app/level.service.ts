@@ -6,10 +6,16 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class LevelService {
-  private currentLevelSubject = new BehaviorSubject<string>('level1');
+  private currentLevelSubject = new BehaviorSubject<number>(1);
   currentLevel$ = this.currentLevelSubject.asObservable();
+  currentLevel: number = 1;
 
-  setCurrentLevel(level: string): void {
+  getCurrentLevel(): number {
+    return this.currentLevel;
+  }
+
+  setCurrentLevel(level: number): void {    
     this.currentLevelSubject.next(level);
+    this.currentLevel = level;
   }
 }

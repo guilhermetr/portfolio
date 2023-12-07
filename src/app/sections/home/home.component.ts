@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LevelService } from 'src/app/level.service';
 
 @Component({
   selector: 'app-home',
@@ -7,15 +6,7 @@ import { LevelService } from 'src/app/level.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-  currentLevel!: string;
-
-  constructor(private levelService: LevelService) {}
-
-  ngOnInit(): void {
-    this.levelService.currentLevel$.subscribe((level: string) => {
-      this.currentLevel = level;
-    });
-  }  
+  
+  constructor() {}
   
 }

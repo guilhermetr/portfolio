@@ -13,19 +13,19 @@ import { AfterViewInit, Component, Input } from '@angular/core';
       state('end', style({
         clipPath: 'circle(100% at 50% 50%)',
       })),
-      transition('start => end', animate('3000ms ease-out')),
-      transition('end => start', animate('3000ms ease-out')),
+      transition('start => end', animate('1500ms ease-out')),
+      transition('end => start', animate('1500ms ease-out')),
     ]),
   ],
 })
 export class BodyComponent implements AfterViewInit {
 
-  @Input()level!: string;
+  @Input()level!: number;
   animationState: 'start' | 'end' = 'start';
   
   ngAfterViewInit(): void {
-    if (this.level != 'level1') {      
-      const container = document.querySelector(`.container.${this.level}`)!;
+    if (this.level != 1) {      
+      const container = document.querySelector(`.container.level${this.level}`)!;
       container.classList.add('hidden');        
     }
   }
@@ -36,6 +36,10 @@ export class BodyComponent implements AfterViewInit {
 
   reverseAnimation() {
     this.animationState = 'start';
+  }
+
+  getLevelClass(): string {
+    return `level${this.level}`;
   }
 
 }

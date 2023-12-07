@@ -1,4 +1,5 @@
 <div class="upgrade-animation"></div>
 <app-upgrade-popup class="upgrade-section"></app-upgrade-popup>
-<app-body level="level1"></app-body>
-<app-body level="level3"></app-body>
+<app-body [level]="convertToNumber('1')" style="z-index: 1;"></app-body>
+<app-body [level]="convertToNumber('2')" style="z-index: 2;"></app-body>
+<app-body [level]="convertToNumber('3')" style="z-index: 3;"></app-body>

@@ -1,4 +1,4 @@
-<div class="container" [class]="level" [@clipPathAnimation]="level != 'level1' ? animationState : null">
+<div class="container" [class]="getLevelClass()" [@clipPathAnimation]="getLevelClass() != 'level1' ? animationState : null">
     <app-header [level]="level"></app-header>    
     <app-home id="home"></app-home>
     <app-skills id="skills" [level]="level"></app-skills>

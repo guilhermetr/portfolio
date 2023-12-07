@@ -8,7 +8,7 @@ import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() level!: string;
+  @Input() level!: number;
   isNavbarOpened = false;
   
   constructor(private viewportScroller: ViewportScroller, private el: ElementRef) {}
@@ -37,4 +37,9 @@ export class HeaderComponent implements OnInit {
       this.isNavbarOpened = false;
     }
   }
+
+  getLevelClass(): string {
+    return `level${this.level}`;
+  }
+  
 }

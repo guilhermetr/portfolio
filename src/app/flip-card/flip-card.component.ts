@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { LevelService } from '../level.service';
 
 @Component({
   selector: 'app-flip-card',
@@ -14,7 +13,7 @@ export class FlipCardComponent implements OnInit {
   
   isFlipped: boolean = false;    
         
-  constructor(private levelService: LevelService) {}
+  constructor() {}
 
   ngOnInit(): void {}  
   

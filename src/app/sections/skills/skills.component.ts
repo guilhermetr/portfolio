@@ -9,7 +9,7 @@ import { LevelService } from 'src/app/level.service';
 })
 export class SkillsComponent implements OnInit {
   
-  @Input() level!: string;
+  @Input() level!: number;
         
   constructor(private viewportScroller: ViewportScroller) {}
 
@@ -18,5 +18,9 @@ export class SkillsComponent implements OnInit {
   scrollToElement(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);   
   }  
+
+  getLevelClass(): string {
+    return `level${this.level}`;
+  }
 
 }

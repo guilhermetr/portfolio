@@ -12,22 +12,25 @@ export class AppComponent implements OnInit {
 
   @ViewChildren(BodyComponent) bodyComponents!: QueryList<BodyComponent>;
 
-  currentLevel!: string;
+  currentLevel: number = 1;
   upgradeAnimationState: 'start' | 'end' = 'start';
 
   constructor(private viewportScroller: ViewportScroller, private levelService: LevelService) {}
 
   ngOnInit(): void {
     this.levelService.currentLevel$.subscribe((level) => {
-      const newContainer = document.querySelector(`.container.${level}`)!;
-      if (newContainer) {
-        newContainer.classList.remove('hidden');
-        const body = this.getBodyComponent(level);
-        if (body) {
-          body.startAnimation();
-        }        
-      }      
-
+      const container = document.querySelector(`.container.level${level}`)!;
+      if (container) {
+        if (level > this.currentLevel) {        
+        container.classList.remove('hidden');
+          const body = this.getBodyComponent(level)!;             
+          body.startAnimation();          
+        } else {
+          const body = this.getBodyComponent(this.currentLevel)!;
+          body.reverseAnimation();
+        }
+      }           
+      this.currentLevel = level;
     });
   }
 
@@ -35,11 +38,20 @@ export class AppComponent implements OnInit {
     body.startAnimation();
   }
 
-  private getBodyComponent(level: string): BodyComponent | undefined {
+  private getBodyComponent(level: number): BodyComponent | undefined {
     return this.bodyComponents.find((body: any) => body.level === level);
   }
 
   public scrollToElement(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
   }
+
+  convertToNumber(value: string): number {
+    return parseInt(value);
+  }
+
+  getLevelClass(level: number): string {
+    return `level${level}`;
+  }
+
 }

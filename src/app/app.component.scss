@@ -1,17 +1,5 @@
-.hidden {
-  display: none;
-}
-
 app-body {  
   position: absolute;
-}
-
-app-body[level="level1"] {  
-  z-index: 1;
-}
-
-app-body[level="level3"] {  
-  z-index: 2;
 }
 
 .upgrade-section {
