@@ -1,31 +1,56 @@
-<div class="full-screen-section projects-section" [class]="level">
+<div class="full-screen-section projects-section" [class]='getLevelClass()'>
     <h2>Projects</h2>
     <h3>Explore my latest projects below. More exciting endeavors are in the works, so stay tuned for updates!</h3>
-    <div class="project-card">      
+    <div class="project-card">
+      <h3>Personal AIde</h3>
       <div class="project-info">
-        <h3>Personal AIde</h3>
-        <p>
-          Web application that enables users to perform AI-driven tasks in areas such as Writing
-          and Programming through an intuitive card interface. 
-        </p>
-        <p>
-          It was developed using Angular for the frontend, Firebase for user management and a
-          Google Cloud Function for integrating AI services.
-        </p>
-        <div class="project-links">
-          <a href="link-to-github-project1" target="_blank">GitHub</a>
-          <a href="link-to-demo-project1" target="_blank">Demo</a>
+        <div class="project-info__text-content">
+          <div>
+            <p>
+              Web application that enables users to perform AI-driven tasks in areas such as Writing
+              and Programming through an intuitive card interface. 
+            </p>
+            <p>
+              It was developed using Angular for the frontend, Firebase for user management and a
+              Google Cloud Function for integrating AI services.
+            </p>
+          </div>
+          <div>
+            <ul class="project-info__tags">
+              <ng-container *ngFor="let tag of ['Angular', 'Firebase', 'Google Cloud Function', 'AI', 'HTML', 'CSS']; let last = last">
+                  <li>{{ tag }}{{ !last && level === 1 ? ',' : '' }}</li>
+              </ng-container>
+            </ul>
+          </div>
+          <div class="project-info__links">
+            <a href="https://github.com/guilhermetr/personal-AIde" target="_blank" title="Source Code"><i class="fa-brands fa-github"></i></a>            
+            <a href="https://guilhermetr.github.io/personal-AIde" target="_blank" title="See Live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="project-info__video">
+          <iframe width="560" height="315" style="max-width: 100%;" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>      
     </div>
     <div class="project-card">
+      <h3>Personal Website</h3>
       <div class="project-info">
-        <h3>Personal Website</h3>
-        <p>
-          This website was built using Angular.
-        </p>
-        <div class="project-links">
-          <a href="link-to-github-project1" target="_blank">GitHub</a>          
+        <div class="project-info__text-content">
+          <div>
+            <p>
+              This website was built using Angular.
+            </p>
+          </div>
+          <div>
+            <ul class="project-info__tags">
+              <ng-container *ngFor="let tag of ['Angular', 'HTML', 'CSS']; let last = last">
+                  <li>{{ tag }}{{ !last && level === 1 ? ',' : '' }}</li>
+              </ng-container>
+            </ul>
+          </div>          
+          <div class="project-info__links">
+            <a href="https://github.com/guilhermetr/portfolio" target="_blank" title="Source Code"><i class="fa-brands fa-github"></i></a>          
+          </div>
         </div>
       </div>      
     </div>

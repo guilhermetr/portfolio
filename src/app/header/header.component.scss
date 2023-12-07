@@ -110,6 +110,19 @@ $navbarBreakpoint: 768px;
     }       
 }
 
+.level2 {
+    .nav-link {
+        text-decoration: none;
+        color: var(--dark);
+        transition: color 0.3s ease;
+    }
+
+    .social-link {
+        text-decoration: none;
+        color: var(--dark);
+    }
+}
+
 .level3 {
     $menuHeight: 80px;    
 

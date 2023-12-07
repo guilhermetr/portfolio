@@ -39,12 +39,36 @@ html {
     }    
 }
 
+.level2 {
+    --primary: rgb(181, 39, 37);
+    --dark: rgb(51, 51, 51);  
+
+    background-color: rgb(245, 245, 245);
+
+    h1, h2, h3 {
+        margin: 5px;
+    }
+
+    h1 {
+        font-size: 3rem;        
+    }
+    
+    h2 {
+        font-size: 2.5rem;        
+    }
+    
+    h3 {
+        font-size: 1.5rem;                
+    }    
+}
+
 .level3 {
     --primary: rgb(181, 39, 37);
     --primary-hover: rgb(152, 32, 30);  
+    --primary-light: rgb(238, 222, 216);
     --dark: rgb(51, 51, 51);  
 
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(240, 240, 240);
     font-family: 'League Spartan', sans-serif;
         
     h1 {

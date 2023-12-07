@@ -8,10 +8,14 @@ import { LevelService } from 'src/app/level.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  @Input() level!: string;
+  @Input() level!: number;
 
   constructor() {}
   
-  ngOnInit(): void {}  
+  ngOnInit(): void {}
+
+  getLevelClass(): string {
+    return `level${this.level}`;
+  }
   
 }

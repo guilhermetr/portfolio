@@ -57,6 +57,35 @@
     }
 }
 
+.level2 {
+    .card__inner {
+        transition: transform 0.1s;
+    }
+    
+    .card__inner.is-flipped {
+        transform: rotateY(180deg);
+    }
+    
+    .card__face {                
+        background-color: #FFF;
+    }                
+    
+    .image {
+        display: block;
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 30px;  
+        background-color: #FFF;
+        border: 5px solid #FFF;        
+    }
+    
+    .card__header h2 {    
+        font-size: 25px;
+        font-weight: 900;    
+        text-align: center;
+    }
+}
+
 .level3 {
     .card {
         perspective: 1000px;    
