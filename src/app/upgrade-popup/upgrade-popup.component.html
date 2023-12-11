@@ -1,9 +1,27 @@
-<div class="card" [@resize]="cardAnimationState">
-  <div class="message-box" [@slideDown]="messageBoxAnimationState">
+<div class="card" [@resize]="cardState">
+  <div class="message-box" [@slideDown]="messageBoxState">
     <p>Not a fan of how the website looks?</p>
-    <button class="collapse-btn" (click)="toggleAnimation()">
-      <i class="fa-solid fa-angle-down"></i>
-    </button>
   </div>
-  <button class="upgrade-btn" (click)="upgrade()">UPGRADE</button>
+  <div class="buttons">
+    <button class="downgrade-btn" 
+            title="Downgrade"
+            [disabled]="currentLevel === 1"
+            (click)="downgrade()">
+      <i class="fa-solid fa-rotate-left" [ngClass]="{'disabled': currentLevel === 1}"></i>
+    </button>
+    <button class="upgrade-btn" 
+            (click)="upgrade()">
+      <ng-container *ngIf="cardState === 'expanded'; else collapsedState">
+        UPGRADE
+    </ng-container>
+    <ng-template #collapsedState>
+        <i class="fa-solid fa-circle-up"></i>
+    </ng-template>
+    </button>
+    <button class="expand-btn"
+            [title]="cardState === 'collapsed' ? 'Expand' : 'Collapse'"
+            (click)="toggleAnimation()">
+      <i class="fa-solid fa-angle-down" [ngClass]="{'rotated': cardState === 'collapsed'}"></i>
+    </button>
+  </div>  
 </div>

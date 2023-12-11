@@ -2,13 +2,12 @@ $col-primary: #00c7ec;
 $col-secondary: #012839;
 
 .card {  
-  background-color: $col-secondary;
-  color: black;
-  border: 1px solid #ddd;
+  background-color: $col-secondary;    
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
   text-align: center;    
   width: 320px;
+  overflow: hidden;
 }
 
 p {
@@ -18,36 +17,46 @@ p {
   padding: 16px 4px 16px 4px;    
 }
 
-.collapse-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  border: none;
-  background: none;
+// Buttons
+
+.buttons {
+  display: flex;
+}
+
+.downgrade-btn {
+  padding: 0 5px;
+  border-radius: 0 0 0 5px;
+  border: none;  
+  background-color: lighten($col-secondary, 10%);
   cursor: pointer;
 }
 
-.collapse-btn:hover {
-  opacity: 0.8;
+.disabled {
+  color: grey !important;
+  cursor: default;
 }
 
-.fa-angle-down {
-  font-size: 15px;
-  transition: transform 0.3s ease;
+.fa-rotate-left {
+  font-size: 18px;  
+  transition: color 0.3s ease;  
   color: $col-primary;
 }
 
-// Upgrade Button
+.downgrade-btn:hover {
+  .fa-rotate-left {
+    color: white;
+  }
+}
 
 .upgrade-btn {  
-  background-color: lighten($col-secondary, 10%);
   width: 100%;
+  padding: 0 15px;  
+  background-color: lighten($col-secondary, 10%);
   display: inline-block;
   position: relative;
   text-align: center;
   color: $col-primary;
   border: none;
-  border-radius: 5px;
   line-height: 2em;  
   text-decoration: none;
   font-family: 'Gabarito', sans-serif;  
@@ -103,5 +112,29 @@ p {
     opacity: 0;
     left: 100%;
   }
+}
+
+.expand-btn {  
+  padding: 0 5px;
+  border: none;  
+  background-color: lighten($col-secondary, 10%);
+  cursor: pointer;
+}
+
+.rotated {
+  transform: rotate(180deg);  
+}
+
+
+.expand-btn:hover {
+  .fa-angle-down {
+    color: white;
+  }
+}
+
+.fa-angle-down {
+  font-size: 18px;  
+  color: $col-primary;
+  transition: transform 0.3s ease, color 0.3s ease;  ;
 }
   

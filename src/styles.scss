@@ -11,6 +11,10 @@ html {
     min-width: 320px;   
 }
 
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
 .full-screen-section {
     min-height: 100vh;
     margin: 0;
@@ -22,10 +26,6 @@ html {
 }
 
 .level1 {
-    h1, h2, h3 {
-        margin: 5px;
-    }
-
     h1 {
         font-size: 3rem;        
     }
@@ -45,16 +45,12 @@ html {
 
     background-color: rgb(245, 245, 245);
 
-    h1, h2, h3 {
-        margin: 5px;
-    }
-
     h1 {
         font-size: 3rem;        
     }
     
     h2 {
-        font-size: 2.5rem;        
+        font-size: 3rem;        
     }
     
     h3 {
@@ -73,18 +69,16 @@ html {
         
     h1 {
         font-size: 4rem;
-        margin: 0;
     }
     
     h2 {
         font-size: 3.5rem;
-        margin: 0;
     }
     
     h3 {
         font-size: 25px;
         font-weight: 600;
-        color: var(--dark);
+        color: var(--dark);       
     }        
     
     // SCROLLBAR

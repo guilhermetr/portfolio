@@ -14,7 +14,7 @@ import { LevelService } from '../level.service';
         overflow: 'hidden',
       })),
       state('expanded', style({
-        height: '*',
+        height: '80px',
         opacity: '1',
         overflow: 'hidden',
       })),
@@ -24,7 +24,7 @@ import { LevelService } from '../level.service';
     ]),
     trigger('resize', [
       state('collapsed', style({
-        width: '160px',
+        width: '110px',
       })),
       state('expanded', style({
         width: '320px',
@@ -37,24 +37,33 @@ import { LevelService } from '../level.service';
 })
 export class UpgradePopupComponent implements OnInit {
   
-  messageBoxAnimationState = 'expanded';
-  cardAnimationState = 'expanded';
+  currentLevel!: number;
+  messageBoxState: 'expanded' | 'collapsed' = 'expanded';
+  cardState: 'expanded' | 'collapsed' = 'expanded';
   
   constructor(private levelService: LevelService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    this.levelService.currentLevel$.subscribe((level) => {
+      this.currentLevel = level;
+    })
+  }
 
   toggleAnimation() {
-    this.messageBoxAnimationState = this.messageBoxAnimationState === 'collapsed' ? 'expanded' : 'collapsed';
+    this.messageBoxState = this.messageBoxState === 'collapsed' ? 'expanded' : 'collapsed';
 
     // Delays the resizing animation until after the sliding animation is complete
     setTimeout(() => {
-      this.cardAnimationState = this.cardAnimationState === 'collapsed' ? 'expanded' : 'collapsed';
+      this.cardState = this.cardState === 'collapsed' ? 'expanded' : 'collapsed';
     }, 1); // 1ms creates a diagonal sliding effect
   }
 
   upgrade(): void {
-    this.levelService.setCurrentLevel('level3');
+    this.levelService.setCurrentLevel(this.levelService.getCurrentLevel() + 1);
+  }
+
+  downgrade(): void {
+    this.levelService.setCurrentLevel(this.levelService.getCurrentLevel() - 1);
   }
 
 }
