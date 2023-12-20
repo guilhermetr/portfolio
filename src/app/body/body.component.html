@@ -1,6 +1,6 @@
 <div class="container" [class]="getLevelClass()" [@clipPathAnimation]="getLevelClass() != 'level1' ? animationState : null">
     <app-header [level]="level"></app-header>    
-    <app-home id="home"></app-home>
+    <app-home id="home" [level]="level"></app-home>
     <app-skills id="skills" [level]="level"></app-skills>
     <app-projects id="projects" [level]="level"></app-projects>
     <app-about id="about" [level]="level"></app-about>

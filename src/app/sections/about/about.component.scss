@@ -35,3 +35,29 @@ img {
         border-radius: 50%;
     }
 }
+
+.level4 {      
+    img {
+        border-radius: 50%;
+    }
+
+    .transition-top, .transition-bottom {
+        aspect-ratio: 960/200;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        pointer-events: none
+    }
+
+    .transition-top {
+        top: 0;
+        background-image: url('/assets/layered-waves-top-2.svg'); 
+    }
+
+    .transition-bottom {
+        bottom: 0;
+        background-image: url('/assets/layered-waves-bottom-2.svg');
+    }
+}

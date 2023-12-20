@@ -123,7 +123,7 @@ $navbarBreakpoint: 768px;
     }
 }
 
-.level3 {
+.level3, .level4 {
     $menuHeight: 80px;    
 
     .header {             
@@ -179,4 +179,20 @@ $navbarBreakpoint: 768px;
     .fa-file:hover {
         color: var(--primary)
     }    
+}
+
+.level4 {
+    background-color: var(--primary);
+
+    .nav-link, .social-link {
+        transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--secondary);
+    }
+
+    .fa-file:hover {
+        color: var(--secondary)
+    } 
 }

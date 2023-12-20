@@ -9,6 +9,7 @@ html {
 
 .body {
     min-width: 320px;   
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -23,6 +24,7 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .level1 {
@@ -111,5 +113,30 @@ h1, h2, h3 {
         scrollbar-width: thin;
         scrollbar-color: white rgb(184, 184, 184);
     }    
+}
+
+.level4 {
+    --primary: rgb(238, 222, 216);
+    --secondary: rgb(181, 39, 37);
+    --primary-light: rgb(238, 222, 216);
+    --dark: rgb(51, 51, 51);  
+
+    background-color: rgb(240, 240, 240);
+    font-family: 'League Spartan', sans-serif;
+        
+    h1 {
+        font-size: 4rem;
+        color: rgb(238, 222, 216);
+    }
+    
+    h2 {
+        font-size: 3.5rem;
+    }
+    
+    h3 {
+        font-size: 25px;
+        font-weight: 600;
+        color: var(--dark);       
+    }
 }
 
