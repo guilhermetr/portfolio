@@ -13,8 +13,8 @@ import { LevelService } from '../level.service';
         opacity: '0',
         overflow: 'hidden',
       })),
-      state('expanded', style({
-        height: '80px',
+      state('expanded', style({                
+        height: '55px',
         opacity: '1',
         overflow: 'hidden',
       })),
@@ -40,12 +40,14 @@ export class UpgradePopupComponent implements OnInit {
   currentLevel!: number;
   messageBoxState: 'expanded' | 'collapsed' = 'expanded';
   cardState: 'expanded' | 'collapsed' = 'expanded';
+  message!: string;
   
   constructor(private levelService: LevelService) { }
 
   ngOnInit(): void { 
     this.levelService.currentLevel$.subscribe((level) => {
       this.currentLevel = level;
+      this.message = this.levelService.getLevelMessage(level);
     })
   }
 
@@ -59,10 +61,25 @@ export class UpgradePopupComponent implements OnInit {
   }
 
   upgrade(): void {
+    const currentLevel = this.levelService.getCurrentLevel();    
+    
+    if (currentLevel > 3)
+      return;
+
+    if (currentLevel === 3 && this.messageBoxState === 'expanded') {
+      this.toggleAnimation();
+    }
+
     this.levelService.setCurrentLevel(this.levelService.getCurrentLevel() + 1);
+    
   }
 
   downgrade(): void {
+    const currentLevel = this.levelService.getCurrentLevel();    
+    
+    if (currentLevel === 1)
+      return;
+
     this.levelService.setCurrentLevel(this.levelService.getCurrentLevel() - 1);
   }
 

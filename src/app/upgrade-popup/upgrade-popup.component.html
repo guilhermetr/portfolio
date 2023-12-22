@@ -1,15 +1,16 @@
 <div class="card" [@resize]="cardState">
   <div class="message-box" [@slideDown]="messageBoxState">
-    <p>Not a fan of how the website looks?</p>
+    <p>{{ message }}</p>
   </div>
   <div class="buttons">
     <button class="downgrade-btn" 
             title="Downgrade"
-            [disabled]="currentLevel === 1"
+            [class.disabled]="currentLevel === 1"
             (click)="downgrade()">
       <i class="fa-solid fa-rotate-left" [ngClass]="{'disabled': currentLevel === 1}"></i>
     </button>
-    <button class="upgrade-btn" 
+    <button class="upgrade-btn"
+            [class.disabled]="currentLevel === 4" 
             (click)="upgrade()">
       <ng-container *ngIf="cardState === 'expanded'; else collapsedState">
         UPGRADE

@@ -5,16 +5,21 @@ $col-secondary: #012839;
   background-color: $col-secondary;    
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
-  text-align: center;    
-  width: 320px;
+  width: 320px;  
   overflow: hidden;
+}
+
+.message-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 p {
   font-family: 'Gabarito', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: $col-primary;
-  padding: 16px 4px 16px 4px;    
+  // padding: 16px 4px 16px 4px;   
 }
 
 // Buttons
@@ -33,7 +38,7 @@ p {
 
 .disabled {
   color: grey !important;
-  cursor: default;
+  pointer-events: none;
 }
 
 .fa-rotate-left {
