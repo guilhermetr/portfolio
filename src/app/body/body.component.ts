@@ -1,6 +1,8 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { AfterViewInit, Component, Input } from '@angular/core';
 
+const animationDelay = 1500;
+
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -13,8 +15,8 @@ import { AfterViewInit, Component, Input } from '@angular/core';
       state('end', style({
         clipPath: 'circle(100% at 50% 50%)',
       })),
-      transition('start => end', animate('1500ms ease-out')),
-      transition('end => start', animate('1500ms ease-out')),
+      transition('start => end', animate(`${animationDelay}ms ease-out`)),
+      transition('end => start', animate(`${animationDelay}ms ease-out`)),
     ]),
   ],
 })
@@ -36,6 +38,13 @@ export class BodyComponent implements AfterViewInit {
 
   reverseAnimation() {
     this.animationState = 'start';
+    const previousContainer = document.querySelector(`.container.level${this.level}`)!;
+
+    setTimeout(() => {
+      if (this.animationState == 'start') {
+        previousContainer.classList.add('hidden');
+      }      
+    }, animationDelay);
   }
 
   getLevelClass(): string {
