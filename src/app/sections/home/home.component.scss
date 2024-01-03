@@ -1,5 +1,13 @@
+.name {
+    color: var(--primary);
+}
+
 .level4 {
-    background: rgb(181, 39, 37);
+    background: var(--primary);
+
+    .name {
+        color: white;
+    }
 
     h1 {
         color: black;

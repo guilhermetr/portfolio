@@ -21,27 +21,44 @@
 
 p {
     margin: 0;
-    font-size: 20px;
+    font-size: 21px;
     color: black;
     font-weight: bold;
 }
   
-.level3 {
+.level2 {
     .nav-link {
         text-decoration: none;
-        color: var(--dark);    
-        font-size: 15px;
-        font-weight: 600;
+        color: var(--dark);
         transition: color 0.3s ease;
-        text-align: left;
+        font-weight: bold;
     }
-    
+}
+
+.level3 {
     .nav-link:hover {
         color: var(--primary);
     }
 }
 
-.level4 {      
+.level3, .level4 {
+    .nav-link {
+        text-decoration: none;
+        color: var(--dark);    
+        font-size: 18px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        text-align: left;
+    }
+}
+
+.level4 {       
+    .nav-link:hover {
+        transition: color 0.15s ease, text-shadow 0.15s ease;
+        color: var(--primary);
+        text-shadow: 1.25px 1.25px 1px #000000;
+    }
+
     .transition-top, .transition-bottom {
         aspect-ratio: 960/200;
         width: 100%;

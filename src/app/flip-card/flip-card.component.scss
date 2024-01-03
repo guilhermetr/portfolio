@@ -57,11 +57,7 @@
     }
 }
 
-.level2 {
-    .card__inner {
-        transition: transform 0.1s;
-    }
-    
+.level2 {    
     .card__inner.is-flipped {
         transform: rotateY(180deg);
     }
@@ -128,7 +124,7 @@
     }
     
     .card__inner {
-        transition: transform 1s;
+        transition: transform 0.75s;
     }
 
     .card__inner.is-flipped {
@@ -138,17 +134,17 @@
     .card__face {        
         border-radius: 16px;        
         background-color: #FFF;
-        box-shadow: 0 1px 5px #00000099;                        
+        box-shadow: 3px 3px 5px #000000ce;            
         transition-duration: 200ms;                
     }             
     
     .card__face--front:hover {        
-        box-shadow: 0 5px 20px 5px #00000044;
-        transform: scale3d(1.03, 1.03, 1);
+        box-shadow: 5px 5px 8px #000000b0;  
+        transform: scale3d(1.05, 1.05, 1);
     }
 
     .card__face--back:hover {        
-        box-shadow: 0 2px 8px 2px #00000099;        
+        box-shadow: 3px 3px 8px #000000ce;
     }
      
     .image {

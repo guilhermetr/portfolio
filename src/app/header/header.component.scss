@@ -123,6 +123,16 @@ $navbarBreakpoint: 768px;
     }
 }
 
+.level3 {
+    .nav-link:hover {
+        color: var(--primary);
+    }
+
+    .fa-file:hover {
+        color: var(--primary)
+    }   
+}
+
 .level3, .level4 {
     $menuHeight: 80px;    
 
@@ -147,12 +157,7 @@ $navbarBreakpoint: 768px;
         color: var(--dark);
         transition: color 0.3s ease;
     }
-
-    .nav-link:hover {
-        color: var(--primary);
-    }
-
-
+    
     .social-link {
         text-decoration: none;
         color: var(--dark);
@@ -174,25 +179,18 @@ $navbarBreakpoint: 768px;
 
     .fa-github:hover {
         color: rgb(148, 0, 255);
-    }
-
-    .fa-file:hover {
-        color: var(--primary)
-    }    
+    } 
 }
 
 .level4 {
     background-color: var(--primary);
 
     .nav-link, .social-link {
-        transition: color 0.2s ease;
+        transition: text-shadow 0.15s ease;
+        color: white;
     }
 
-    .nav-link:hover {
-        color: var(--secondary);
+    .nav-link:hover, .social-link:hover {
+        text-shadow: 2px 2px 1px #000000;
     }
-
-    .fa-file:hover {
-        color: var(--secondary)
-    } 
 }
