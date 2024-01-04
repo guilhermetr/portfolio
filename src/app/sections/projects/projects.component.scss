@@ -134,6 +134,15 @@
   }  
 }
 
+.level3, .level4 {
+  .project-info__video {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width:560px;
+    height: 315px;
+  }
+}
+
 .level4 {
   background: var(--primary);
   
@@ -165,7 +174,7 @@
     color: var(--light);
     // text-shadow: 0 0 2px #000000; 
   }
-
+  
   .fa-github {
     font-size: 1.5rem;
   }
