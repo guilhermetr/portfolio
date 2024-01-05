@@ -124,13 +124,30 @@ $navbarBreakpoint: 768px;
 }
 
 .level3 {
+    .nav-link {
+        transition: color 0.3s ease;
+    }
+
     .nav-link:hover {
         color: var(--primary);
+    }
+
+    .fa-linkedin, .fa-github, .fa-file {
+        transition: color 0.3s ease;
     }
 
     .fa-file:hover {
         color: var(--primary)
     }   
+
+    .hamburger {
+        color: var(--dark)
+    }
+
+    .hamburger:hover {
+        transition: color ease 0.3s;
+        color: var(--primary);
+    }
 }
 
 .level3, .level4 {
@@ -154,23 +171,20 @@ $navbarBreakpoint: 768px;
 
     .nav-link {
         text-decoration: none;
-        color: var(--dark);
-        transition: color 0.3s ease;
+        color: var(--dark);        
     }
     
     .social-link {
         text-decoration: none;
         color: var(--dark);
     }
-
+    
     .fa-linkedin, .fa-github {
         font-size: 2rem;
-        transition: color 0.3s ease;
     }
 
     .fa-file {
-        font-size: 1.8rem;
-        transition: color 0.3s ease;
+        font-size: 1.8rem;   
     }
 
     .fa-linkedin:hover {
@@ -185,12 +199,16 @@ $navbarBreakpoint: 768px;
 .level4 {
     background-color: var(--primary);
 
-    .nav-link, .social-link {
-        transition: text-shadow 0.15s ease;
+    .nav-link, .social-link, .hamburger {
+        transition: text-shadow 0.05s ease;
         color: white;
+    }    
+
+    .nav-link:hover, .social-link:hover, .hamburger:hover {
+        text-shadow: 2px 2px 1px #000000;
     }
 
-    .nav-link:hover, .social-link:hover {
-        text-shadow: 2px 2px 1px #000000;
+    .fa-linkedin, .fa-github, .fa-file {
+        transition: color 0.15s ease;
     }
 }

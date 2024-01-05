@@ -5,7 +5,6 @@
 .project-card {
   max-width: 1000px;
   width: 100%;
-  margin-top: 20px;
   background-color: #fff;  
   border-radius: 8px;
   overflow: hidden;
@@ -13,6 +12,8 @@
   font-size: 18px;
   text-align: left;
   padding: 20px;
+  margin: 20px;
+  box-sizing: border-box;
 }
 
 .project-info {
@@ -65,6 +66,10 @@
 }
 
 .level1 {
+  .project-card {
+    border-radius: 0;
+  }
+
   .project-info__tags li {
     font-weight: bold;
   }
@@ -140,6 +145,7 @@
     overflow: hidden;
     width:560px;
     height: 315px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -172,7 +178,10 @@
     padding: 0 10px;   
     padding-top: 4px;
     color: var(--light);
-    // text-shadow: 0 0 2px #000000; 
+  }
+
+  .project-info__video {
+    box-shadow: 3px 3px 8px #000000;
   }
   
   .fa-github {
@@ -187,15 +196,17 @@
     color: rgb(255, 255, 255);
   }
 
-  .project-info__links a:hover {
-    transition: text-shadow 0.1s ease;
+  .project-info__links a:hover {    
+    transition: text-shadow 0.05s ease;
     text-shadow: 2px 2px 1px #000000;
 
     .fa-github {
+      transition: color 0.15s ease;
       color: rgb(148, 0, 255);
     } 
 
     .fa-arrow-up-right-from-square {
+      transition: color 0.15s ease;
       color: var(--primary)
     }
   }  

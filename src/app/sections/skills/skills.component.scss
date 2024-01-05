@@ -48,13 +48,12 @@ p {
         font-size: 18px;
         font-weight: 600;
         transition: color 0.3s ease;
-        text-align: left;
     }
 }
 
 .level4 {       
     .nav-link:hover {
-        transition: color 0.15s ease, text-shadow 0.15s ease;
+        transition: color 0.15s ease, text-shadow 0.05s ease;
         color: var(--primary);
         text-shadow: 1.25px 1.25px 1px #000000;
     }
@@ -71,11 +70,11 @@ p {
 
     .transition-top {
         top: 0;
-        background-image: url('../../../assets/layered-waves-top.png'); 
+        background-image: url('../../../assets/layered-waves-top.svg'); 
     }
 
     .transition-bottom {
         bottom: 0;
-        background-image: url('../../../assets/layered-waves-bottom.png');
+        background-image: url('../../../assets/layered-waves-bottom.svg');
     }
 }
