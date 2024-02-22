@@ -32,6 +32,11 @@ export class AppComponent implements OnInit {
       }           
       this.currentLevel = level;
     });
+
+    setTimeout(() => {
+      if (!this.levelService.hasUserUpgraded)
+        this.levelService.setCurrentLevel(this.levelService.getCurrentLevel() + 1);
+    }, 5000);
   }
 
   startAnimation(body: any) {

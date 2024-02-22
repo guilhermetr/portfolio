@@ -53,12 +53,6 @@
 
 .level1 {
     .card__face {
-        background-color: #ededed;
-    }
-}
-
-.level2 {        
-    .card__face {                
         background-color: #FFF;
     }                
     
@@ -78,7 +72,7 @@
     }
 }
 
-.level3 {
+.level2 {
     .card {
         perspective: 1000px;         
     }
@@ -110,7 +104,7 @@
     }            
 }
 
-.level4 {
+.level3 {
     .card {
         perspective: 1000px;            
     }

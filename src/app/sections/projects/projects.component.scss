@@ -59,35 +59,13 @@
   display: inline-block;
 }
 
-.level1, .level2 {
+.level1 {
   .project-card {
     border: 1px solid #ddd;
   }
 }
 
-.level1 {
-  .project-card {
-    border-radius: 0;
-  }
-
-  .project-info__tags li {
-    font-weight: bold;
-  }
-
-  .project-info__links a p {
-    text-decoration: underline;
-  }
-
-  .fa-github::before {
-      content: "";
-  }
-
-  .fa-arrow-up-right-from-square::before {
-      content: "";  
-  }   
-}
-
-.level2, .level3, .level4 {
+.level1, .level2, .level3 {
   .project-info__links a {
     text-decoration: none;
     margin-right: 20px;
@@ -103,7 +81,7 @@
   }
 }
 
-.level2 {
+.level1 {
   .project-info__tags li {
     background-color: var(--primary);
     color: #fff;
@@ -112,7 +90,7 @@
   }
 }
 
-.level3 {  
+.level2 {  
   .project-card {
     box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
   }
@@ -139,7 +117,7 @@
   }  
 }
 
-.level3, .level4 {
+.level2, .level3 {
   .project-info__video {
     border-radius: 0.5rem;
     overflow: hidden;
@@ -149,7 +127,7 @@
   }
 }
 
-.level4 {
+.level3 {
   background: var(--primary);
   
   h3 {

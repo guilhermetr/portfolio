@@ -73,44 +73,6 @@ $navbarBreakpoint: 768px;
 }
 
 .level1 {
-    .social-links {
-        @media (max-width: $navbarBreakpoint) {            
-            display: flex;
-            flex-direction: column;
-                        
-            .social-link {
-                margin-bottom: 5px;                
-            }
-        }
-    }
-
-    .nav-link {
-        @media (max-width: $navbarBreakpoint) { 
-            margin-bottom: 10px;
-            padding: 0;
-        }
-    }
-
-    .fa-linkedin, .fa-github, .fa-file {
-        font-weight: bold;
-        font-family: "Times New Roman", Times, serif;
-        text-decoration: underline;
-    }
-
-    .fa-linkedin::before {
-        content: "LINKEDIN";  
-    } 
-
-    .fa-github::before {
-        content: "GITHUB";
-    }
-
-    .fa-file::before {
-        content: "RESUME";  
-    }       
-}
-
-.level2 {
     .nav-link {
         text-decoration: none;
         color: var(--dark);
@@ -123,7 +85,7 @@ $navbarBreakpoint: 768px;
     }
 }
 
-.level3 {
+.level2 {
     .nav-link {
         transition: color 0.3s ease;
     }
@@ -150,7 +112,7 @@ $navbarBreakpoint: 768px;
     }
 }
 
-.level3, .level4 {
+.level2, .level3 {
     $menuHeight: 80px;    
 
     .header {             
@@ -196,7 +158,7 @@ $navbarBreakpoint: 768px;
     } 
 }
 
-.level4 {
+.level3 {
     background-color: var(--primary);
 
     .nav-link, .social-link, .hamburger {

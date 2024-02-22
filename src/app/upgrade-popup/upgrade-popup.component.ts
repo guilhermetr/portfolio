@@ -63,10 +63,10 @@ export class UpgradePopupComponent implements OnInit {
   upgrade(): void {
     const currentLevel = this.levelService.getCurrentLevel();    
     
-    if (currentLevel > 3)
+    if (currentLevel > 2)
       return;
 
-    if (currentLevel === 3 && this.messageBoxState === 'expanded') {
+    if (currentLevel === 2 && this.messageBoxState === 'expanded') {
       this.toggleAnimation();
     }
 

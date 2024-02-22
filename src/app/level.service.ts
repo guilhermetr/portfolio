@@ -9,12 +9,12 @@ export class LevelService {
   private currentLevelSubject = new BehaviorSubject<number>(1);
   currentLevel$ = this.currentLevelSubject.asObservable();
   currentLevel: number = 1;
+  hasUserUpgraded: boolean = false;
 
   messages: { [key: number]: string[] } = {
     1: ['Not a fan of how the website looks?', 'Don\'t like the website\'s design?'],
     2: ['Not completely sold on the changes?', 'Didn\'t quite win you over?'],
-    3: ['The next one is the last, I promise', 'Get ready for the grand finale'],
-    4: ['Thank you for reaching the final level!']
+    3: ['You\'ve reached the final level!'],
   }
 
   getCurrentLevel(): number {
@@ -24,6 +24,7 @@ export class LevelService {
   setCurrentLevel(level: number): void {    
     this.currentLevelSubject.next(level);
     this.currentLevel = level;
+    if (!this.hasUserUpgraded) this.hasUserUpgraded = true;
   }
 
   getLevelMessage(level: number): string {

@@ -35,12 +35,17 @@ p {
 }
 
 .level1 {
+    --primary: rgb(0, 199, 236);
+    --dark: rgb(51, 51, 51);  
+
+    background-color: rgb(250, 250, 250);
+
     h1 {
         font-size: 3rem;        
     }
     
     h2 {
-        font-size: 2.5rem;        
+        font-size: 3rem;        
     }
     
     h3 {
@@ -50,29 +55,10 @@ p {
 
 .level2 {
     --primary: rgb(0, 199, 236);
-    --dark: rgb(51, 51, 51);  
-
-    background-color: rgb(245, 245, 245);
-
-    h1 {
-        font-size: 3rem;        
-    }
-    
-    h2 {
-        font-size: 3rem;        
-    }
-    
-    h3 {
-        font-size: 1.5rem;                
-    }    
-}
-
-.level3 {
-    --primary: rgb(0, 199, 236);
     --primary-light: rgb(216, 231, 238);
     --dark: rgb(64, 64, 64);  
 
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(235, 235, 235);
     font-family: 'League Spartan', sans-serif;
         
     h1 {
@@ -90,7 +76,7 @@ p {
     }               
 }
 
-.level4 {
+.level3 {
     --primary: rgb(0, 199, 236);    
     --secondary: rgb(1, 40, 57);
     --secondary-light: rgb(3, 110, 157);
